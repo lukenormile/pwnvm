@@ -87,6 +87,9 @@ pushd pwndbg
 ./setup.sh
 popd
 
+# Splitmind for pwndbg
+git clone https://github.com/jerdna-regeiz/splitmind
+
 # fixenv
 wget https://raw.githubusercontent.com/hellman/fixenv/master/r.sh
 mv r.sh fixenv
