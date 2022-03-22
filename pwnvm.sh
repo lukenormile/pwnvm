@@ -87,9 +87,6 @@ pushd pwndbg
 ./setup.sh
 popd
 
-# Splitmind for pwndbg
-git clone https://github.com/jerdna-regeiz/splitmind
-
 # fixenv
 wget https://raw.githubusercontent.com/hellman/fixenv/master/r.sh
 mv r.sh fixenv
@@ -124,3 +121,9 @@ git clone https://github.com/bootleg/ret-sync.git
 # Dotfiles
 wget https://raw.githubusercontent.com/lukenormile/my-vimrc/master/.vimrc
 wget https://raw.githubusercontent.com/lukenormile/my-tmux-conf/master/.tmux.conf
+
+# Splitmind for pwndbg
+git clone https://github.com/jerdna-regeiz/splitmind
+echo "source $PWD/splitmind/gdbinit.py" >> ~/.gdbinit
+wget https://raw.githubusercontent.com/lukenormile/pwnvm/master/splitmind-config
+cat splitmind-config >> ~/.gdbinit
